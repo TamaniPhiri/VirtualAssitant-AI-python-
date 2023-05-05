@@ -1,0 +1,74 @@
+[
+    {
+        "label": "speech_recognition",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "pywhatkit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pywhatkit",
+        "description": "pywhatkit",
+        "detail": "pywhatkit",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "wikipedia",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipedia",
+        "description": "wikipedia",
+        "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
+        "label": "talk",
+        "kind": 2,
+        "importPath": "Travis",
+        "description": "Travis",
+        "peekOfCode": "def talk(text):\n    machine.say(text)\nmachine.runAndWait()\ndef input_instruction():\n    global instruction\n    try:\n        with aa.Microphone() as origin:\n                print(\"listenning now\")\n                speech = listener.listen(origin)\n                instruction=listener.recognize_google(speech)",
+        "detail": "Travis",
+        "documentation": {}
+    },
+    {
+        "label": "input_instruction",
+        "kind": 2,
+        "importPath": "Travis",
+        "description": "Travis",
+        "peekOfCode": "def input_instruction():\n    global instruction\n    try:\n        with aa.Microphone() as origin:\n                print(\"listenning now\")\n                speech = listener.listen(origin)\n                instruction=listener.recognize_google(speech)\n                instruction=instruction.lower()\n                if \"Travis\" in instruction:\n                        instruction=instruction.replace(\"Travis\",\"\")",
+        "detail": "Travis",
+        "documentation": {}
+    },
+    {
+        "label": "play_Travis",
+        "kind": 2,
+        "importPath": "Travis",
+        "description": "Travis",
+        "peekOfCode": "def play_Travis():\n    instruction = input_instruction()\n    print(instruction)\n    if \"play\" in instruction:\n        song=instruction.replace('play', \"\")\n        talk(\"playing\"+ song)\n        pywhatkit.playsonyt(song)\n    elif 'time' in instruction:\n        time= datetime.datetime.now().strftime('%I:%M&p')\n        talk('Current time'+ time)",
+        "detail": "Travis",
+        "documentation": {}
+    }
+]

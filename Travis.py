@@ -46,7 +46,7 @@ def play_Travis():
         talk("Today's date"+ date)
         
     elif 'how are you' in instruction:
-        talk('I am fine , how bout you')
+        talk('I am fine , how bout you?')
         
     elif 'who is' in instruction:
         human=instruction.replace('who is', "")
